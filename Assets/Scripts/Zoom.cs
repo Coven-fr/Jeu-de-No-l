@@ -12,7 +12,15 @@ public class Zoom : MonoBehaviour
     [SerializeField] private float zoomOutMin;
     [SerializeField] private float zoomOutMax;
 
-    float previousZoomSliderValue;
+    float previousZoomSliderValue; 
+    float zoomStep;
+    float increment;
+
+    float time;
+
+    Vector2 initZoomPos;
+
+    bool isZoomOut;
 
     private void Start()
     {
@@ -34,8 +42,9 @@ public class Zoom : MonoBehaviour
     {
         transform.localScale = new Vector2(zoomSlider.value, zoomSlider.value);
 
-        if(zoomSlider.value < previousZoomSliderValue)
+        if (zoomSlider.value < previousZoomSliderValue)
             ResetRectTransform();
+        else isZoomOut = false;
 
         previousZoomSliderValue = zoomSlider.value;
     }
@@ -54,6 +63,7 @@ public class Zoom : MonoBehaviour
         Debug.Log("Sign:" + sign);
 
         if (sign < 0) ResetRectTransform();
+        else isZoomOut = false;
     }
 
     void ResetRectTransform()
@@ -62,10 +72,27 @@ public class Zoom : MonoBehaviour
 
         RectTransform rect = selectable.GetComponent<RectTransform>();
 
-        float step = zoomSlider.value / 0.1f;
-        float increment = Mathf.Abs(rect.anchoredPosition.x / step);
+        if (!isZoomOut)
+        {
+            initZoomPos = rect.anchoredPosition;
+            zoomStep = zoomSlider.value / 0.1f;
+            zoomStep = Mathf.Abs(zoomStep);
 
-        rect.anchoredPosition = Vector2.MoveTowards(rect.anchoredPosition, new Vector2(0,0), increment);
+            isZoomOut = true;
+        }
+
+        increment = time / zoomStep;
+        increment = increment * increment * (3f - 2f * increment);
+
+        //increment = Mathf.Abs(rect.anchoredPosition.x / zoomStep);
+        //increment = increment * increment * (3f - 2f * increment);
+
+        Debug.Log("increment: " + increment);
+
+        //rect.anchoredPosition = Vector2.MoveTowards(initZoomPos, new Vector2(0, 0), increment);
+        rect.anchoredPosition = Vector2.Lerp(initZoomPos, new Vector2(0, 0), increment);
+
+        time += Time.deltaTime;
 
         Debug.Log(rect.position.x + " // " + rect.position.y);
     }
