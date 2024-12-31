@@ -7,6 +7,8 @@ public class Selectable : MonoBehaviour
 {
     [SerializeField] ParticleSystem particles;
 
+    [SerializeField] ScriptableElement Element;
+
     Collider2D col => GetComponent<Collider2D>();
 
     bool isDiscovered;
@@ -21,5 +23,7 @@ public class Selectable : MonoBehaviour
         particles.Play();
 
         isDiscovered = true;
+
+        ElementsManager.instance.CheckElement(Element);
     }
 }

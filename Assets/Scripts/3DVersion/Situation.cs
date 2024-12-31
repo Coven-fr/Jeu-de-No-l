@@ -6,6 +6,11 @@ public class Situation : Selectable
 {
     [SerializeField] GameObject Mask;
 
+    void Start()
+    {
+        
+    }
+
     public override void Discover()
     {
         base.Discover();
