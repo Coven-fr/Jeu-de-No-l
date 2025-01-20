@@ -19,12 +19,14 @@ public class ZoomSlider : Slider
 
         onValueChanged.AddListener(delegate { Zoom(); });
 
-        GameEvent.current.onUpdateZoom += UpdateSlider;
+        if(GameEvent.current)
+            GameEvent.current.onUpdateZoom += UpdateSlider;
     }
 
     void Zoom()
     {
-        GameEvent.current.onSliderZoom?.Invoke(value);
+        if (GameEvent.current)
+            GameEvent.current.onSliderZoom?.Invoke(value);
     }
 
     void UpdateSlider(float newValue)

@@ -8,6 +8,8 @@ public class ElementsManager : Singleton<ElementsManager>
 
     [SerializeField] Element[] characters;
 
+    public int CheckedElementsCount { get; private set; }
+
     public void CheckElement(ScriptableElement element)
     {
         Debug.Log("Check element");
@@ -17,6 +19,8 @@ public class ElementsManager : Singleton<ElementsManager>
             if(element.ElementName == risk.ElementName)
             {
                 risk.CheckToggle();
+
+                ++CheckedElementsCount;
             }
         }
 
@@ -27,7 +31,18 @@ public class ElementsManager : Singleton<ElementsManager>
                 Debug.Log("Element: " + element.name);
 
                 character.CheckToggle();
+
+                ++CheckedElementsCount;
             }
         }
+
+        GameManager.instance.Check();
+    }
+
+    public int GetElementsCount()
+    {
+        var count = risks.Length + characters.Length;
+
+        return count;
     }
 }
