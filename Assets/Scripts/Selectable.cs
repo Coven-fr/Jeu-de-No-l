@@ -11,19 +11,32 @@ public class Selectable : MonoBehaviour
 
     Collider2D col => GetComponent<Collider2D>();
 
-    bool isDiscovered;
+    void Start()
+    {
+        ResetElement();
+    }
 
     public virtual void Discover()
     {
-        if (isDiscovered)
+        if (Element.IsChecked)
             return;
 
-        col.enabled = false;
+        Disable();
 
         particles.Play();
 
-        isDiscovered = true;
-
         ElementsManager.instance.CheckElement(Element);
+    }
+
+    void Disable()
+    {
+        col.enabled = false;
+
+        Element.IsChecked = true;
+    }
+
+    void ResetElement()
+    {
+        Element.IsChecked = false;
     }
 }

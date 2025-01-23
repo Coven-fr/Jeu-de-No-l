@@ -13,5 +13,7 @@ public class Element : MonoBehaviour
     public void CheckToggle()
     {
         toggle.isOn = true;
+
+        Debug.Log("Check!");
     }
 }

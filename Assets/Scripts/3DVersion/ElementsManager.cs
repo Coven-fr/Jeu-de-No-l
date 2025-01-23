@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ElementsManager : Singleton<ElementsManager>
@@ -16,7 +14,7 @@ public class ElementsManager : Singleton<ElementsManager>
 
         foreach(var risk in risks)
         {
-            if(element.ElementName == risk.ElementName)
+            if(element.Name == risk.ElementName)
             {
                 risk.CheckToggle();
 
@@ -26,7 +24,7 @@ public class ElementsManager : Singleton<ElementsManager>
 
         foreach(var character in characters)
         {
-            if (element.ElementName == character.ElementName)
+            if (element.Name == character.ElementName)
             {
                 Debug.Log("Element: " + element.name);
 

@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Coven/Element")]
 public class ScriptableElement : ScriptableObject
 {
-    [SerializeField] string Name;
-    public string ElementName { get { return Name; } }
+    [SerializeField] string elementName;
+    public string Name { get { return elementName; } }
 
-    [SerializeField] bool Checked;
+    public bool IsChecked;
 }
