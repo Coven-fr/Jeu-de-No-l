@@ -43,4 +43,19 @@ public class ElementsManager : Singleton<ElementsManager>
 
         return count;
     }
+
+    public void Reset()
+    {
+        CheckedElementsCount = 0;
+
+        foreach(var risk in risks)
+        {
+            risk.Reset();
+        }
+
+        foreach(var character in characters)
+        {
+            character.Reset();
+        }
+    }
 }

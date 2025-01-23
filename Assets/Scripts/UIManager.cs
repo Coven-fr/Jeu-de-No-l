@@ -9,29 +9,60 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] Canvas gameScreen;
     [SerializeField] Canvas endScreen;
 
+    Canvas currentScreen;
+    Canvas prevScreen;
+
     void Start()
     {
         startScreen.enabled = true;
         tutoScreen.enabled = false;
         gameScreen.enabled = false;
         endScreen.enabled = false;
+
+        currentScreen = startScreen;
+    }
+
+    public void ShowStartScreen()
+    {
+        prevScreen = currentScreen;
+        prevScreen.enabled = false;
+
+        currentScreen = startScreen;
+        currentScreen.enabled = true;
     }
 
     public void ShowTutoScreen()
     {
-        startScreen.enabled = false;
-        tutoScreen.enabled = true;
+        prevScreen = currentScreen;
+        prevScreen.enabled = false;
+
+        currentScreen = tutoScreen;
+        currentScreen.enabled = true;
     }
 
     public void ShowGameScreen()
     {
-        tutoScreen.enabled = false;
-        gameScreen.enabled = true;
+        prevScreen = currentScreen;
+        prevScreen.enabled = false;
+
+        currentScreen = gameScreen;
+        currentScreen.enabled = true;
     }
 
     public void ShowEndScreen()
     {
-        gameScreen.enabled = false;
-        endScreen.enabled = true;
+        prevScreen = currentScreen;
+        prevScreen.enabled = false;
+
+        currentScreen = endScreen;
+        currentScreen.enabled = true;
+    }
+
+    public void Back()
+    {
+        currentScreen.enabled = false;
+        prevScreen.enabled = true;
+
+        currentScreen = prevScreen;
     }
 }

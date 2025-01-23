@@ -16,4 +16,9 @@ public class Element : MonoBehaviour
 
         Debug.Log("Check!");
     }
+
+    public void Reset()
+    {
+        toggle.isOn = false;
+    }
 }

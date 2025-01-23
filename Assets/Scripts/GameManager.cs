@@ -29,4 +29,11 @@ public class GameManager : Singleton<GameManager>
             UIManager.instance.ShowEndScreen();
         }
     }
+
+    public void Restart()
+    {
+        GameEvent.current.onRestart?.Invoke();
+
+        ElementsManager.instance.Reset();
+    }
 }

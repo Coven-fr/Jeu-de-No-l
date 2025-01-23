@@ -35,7 +35,7 @@ public class Selectable : MonoBehaviour
         Element.IsChecked = true;
     }
 
-    void ResetElement()
+    protected virtual void ResetElement()
     {
         Element.IsChecked = false;
     }

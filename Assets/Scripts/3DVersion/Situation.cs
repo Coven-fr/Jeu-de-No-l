@@ -12,4 +12,14 @@ public class Situation : Selectable
 
         Mask.SetActive(false);
     }
+
+    private void OnEnable()
+    {
+        GameEvent.current.onRestart += ResetElement;
+    }
+
+    private void OnDisable()
+    {
+        GameEvent.current.onRestart -= ResetElement;
+    }
 }

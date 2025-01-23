@@ -19,4 +19,6 @@ public class GameEvent : MonoBehaviour
     public delegate void PanCallback(Vector2 value);
     public PanCallback onPan;
 
+    public delegate void GameEventCallback();
+    public GameEventCallback onRestart;
 }

@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
 
     void OnPanPerformed(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && isPressed)
         {
             Vector2 panAxis = ctx.ReadValue<Vector2>();
 
