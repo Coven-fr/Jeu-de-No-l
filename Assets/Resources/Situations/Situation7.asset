@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation7
   m_EditorClassIdentifier: 
   elementName: "Risque \xE9lectrique (Tension)"
+  type: 1
   IsChecked: 0

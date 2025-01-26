@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation10
   m_EditorClassIdentifier: 
   elementName: Risque coupure
+  type: 1
   IsChecked: 0

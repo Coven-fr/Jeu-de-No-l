@@ -6,11 +6,11 @@ public class GameManager : Singleton<GameManager>
 {
     int finalCount;
 
-    ElementsManager elements;
+    ElementsUIManager elements;
 
     private void Start()
     {
-        elements = ElementsManager.instance;
+        elements = ElementsUIManager.instance;
 
         finalCount = elements.GetElementsCount();
 
@@ -34,6 +34,6 @@ public class GameManager : Singleton<GameManager>
     {
         GameEvent.current.onRestart?.Invoke();
 
-        ElementsManager.instance.Reset();
+        ElementsUIManager.instance.Reset();
     }
 }

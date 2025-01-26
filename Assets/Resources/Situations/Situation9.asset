@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation9
   m_EditorClassIdentifier: 
   elementName: Risques psychosociaux
-  IsChecked: 1
+  type: 1
+  IsChecked: 0

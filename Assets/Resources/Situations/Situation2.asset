@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation2
   m_EditorClassIdentifier: 
   elementName: Risque manutention
+  type: 1
   IsChecked: 0

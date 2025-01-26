@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation11
   m_EditorClassIdentifier: 
   elementName: "Risque br\xFBlure"
+  type: 1
   IsChecked: 0

@@ -25,7 +25,7 @@ public class Selectable : MonoBehaviour
 
         particles.Play();
 
-        ElementsManager.instance.CheckElement(Element);
+        ElementsUIManager.instance.CheckElement(Element);
     }
 
     void Disable()

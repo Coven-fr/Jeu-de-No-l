@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation4
   m_EditorClassIdentifier: 
   elementName: Risque chimique (Explosion)
+  type: 1
   IsChecked: 0

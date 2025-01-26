@@ -16,6 +16,8 @@ public class CameraZoomAndPan : MonoBehaviour
     [SerializeField] float maxZoom = 20f;         // Zoom maximum
     public float MaxZoom { get { return maxZoom; } }
     private float previousZoom;         // Pour suivre le zoom précédent
+    private bool isZoomMin;
+    private bool isZoomMax;
 
     [Header("Pan")]
     [SerializeField] float panSpeed = 0.1f;       // Vitesse du déplacement de la caméra
@@ -30,6 +32,9 @@ public class CameraZoomAndPan : MonoBehaviour
 
         if(zoomValue < 3)
         {
+
+            Vector3 mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+
             // Modifier le champ de vision (orthographicSize) en fonction du défilement de la souris
             newZoom = cam.orthographicSize - zoomValue * zoomSpeed;
 
@@ -38,6 +43,15 @@ public class CameraZoomAndPan : MonoBehaviour
 
             // Appliquer le nouveau zoom
             cam.orthographicSize = newZoom;
+
+            if(zoomValue > 0  && !isZoomMin)
+            {
+                Vector3 move = mousePos - cam.ScreenToWorldPoint(Input.mousePosition);
+
+                Debug.Log("Move: " + move);
+
+                transform.position += move;
+            }            
 
             GameEvent.current.onUpdateZoom?.Invoke(newZoom);
         }
@@ -48,13 +62,13 @@ public class CameraZoomAndPan : MonoBehaviour
             cam.orthographicSize = newZoom;
         }
 
-        Debug.Log("Zoom: " + newZoom);
-
         // Si nous dézoomons (c'est-à-dire si le zoom actuel est plus grand que le zoom précédent), nous recentrons la caméra
-        if (newZoom > previousZoom)
+        if (newZoom > previousZoom && !isZoomMax)
         {
             CenterCameraSmoothly();
         }
+
+        UpdateZoomState();
 
         // Mettre à jour le zoom précédent pour la prochaine comparaison
         previousZoom = newZoom;
@@ -126,6 +140,12 @@ public class CameraZoomAndPan : MonoBehaviour
             minPanLimit.y = -halfSpriteHeight * limitsMultiplier + cameraHeight / 2;
             maxPanLimit.y = halfSpriteHeight * limitsMultiplier - cameraHeight / 2;
         }
+    }
+    
+    void UpdateZoomState()
+    {
+        isZoomMin = cam.orthographicSize == minZoom;
+        isZoomMax = cam.orthographicSize == maxZoom;
     }
 
     private void OnEnable()

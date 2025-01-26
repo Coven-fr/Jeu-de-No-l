@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation5
   m_EditorClassIdentifier: 
   elementName: Risque chimique (Poison)
+  type: 1
   IsChecked: 0

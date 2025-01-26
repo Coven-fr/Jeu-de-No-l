@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation3
   m_EditorClassIdentifier: 
   elementName: Risque chute (Enseigne)
+  type: 1
   IsChecked: 0

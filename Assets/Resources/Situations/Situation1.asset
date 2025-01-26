@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Situation1
   m_EditorClassIdentifier: 
   elementName: Risque chute (Ronron)
-  IsChecked: 1
+  type: 1
+  IsChecked: 0
