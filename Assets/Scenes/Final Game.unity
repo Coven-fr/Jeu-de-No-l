@@ -1803,6 +1803,14 @@ PrefabInstance:
       value: "Cyprien, le Game Designer : il associe le game design, sa formation
         de base, \xE0 la pr\xE9vention pour d\xE9velopper des ateliers engageants."
       objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -11.668701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 79.181274
+      objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2430,6 +2438,14 @@ PrefabInstance:
       value: "Bastien, le Chef de Projet Game Design : il associe le game design,
         sa formation de base, \xE0 la pr\xE9vention pour cr\xE9er des ateliers ludiques."
       objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -15.836182
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 64.178345
+      objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2938,6 +2954,14 @@ PrefabInstance:
       value: "Eleana, la Coordinatrice des Op\xE9rations : elle est partout et accompagne
         les diff\xE9rents p\xF4les pour assurer le bon d\xE9roulement des op\xE9rations."
       objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -18.292969
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 69.32056
+      objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3295,14 +3319,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.73333335, g: 0.29411766, b: 0.31764707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3ff99e27bc08b794dbc9f4d00b1e7ba2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3802,8 +3826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 750}
+  m_AnchoredPosition: {x: -25, y: 0}
+  m_SizeDelta: {x: 71.8146, y: 750}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &831593094
 GameObject:
@@ -4214,6 +4238,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Maureen, la Responsable R&D : elle associe la pr\xE9vention \xE0 du
         game design pour ancrer efficacement les messages p\xE9dagogiques."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -23.106873
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 77.98566
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4783,6 +4815,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Lucie, la Stagiaire Graphiste : elle con\xE7oit des visuels impactants
         et cr\xE9atifs pour toutes les r\xE9alisations de l\u2019\xE9quipe."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -12.502197
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 80.84802
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5411,6 +5451,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Sandrine, la Responsable Commerciale : elle trouve toujours la solution
         la plus adapt\xE9e aux diff\xE9rents besoins de nos clients."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -18.718689
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 73.53766
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7155,6 +7203,14 @@ PrefabInstance:
       value: "Virginie, la Commerciale : elle r\xE9pond aux besoins et attentes de
         nos clients en capturant les solutions les plus adapt\xE9es."
       objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -17.330078
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 66.43219
+      objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7338,7 +7394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.55, y: 0.25}
   m_AnchorMax: {x: 0.95, y: 0.85}
-  m_AnchoredPosition: {x: 0.00012207031, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1417537091
@@ -7591,6 +7647,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "J\xE9r\xE9my, le Responsable Communication : il a une vision \xE0 360\xB0
         pour partager nos nouveaut\xE9s sur les diff\xE9rents canaux."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -14.70752
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 62.84131
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8050,7 +8114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9placer la cam\xE9ra"
+  m_text: "Maintenir pour d\xE9placer la cam\xE9ra"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
   m_sharedMaterial: {fileID: -6344687885589285405, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
@@ -8113,7 +8177,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -12.453369, y: 0, z: -14.717163, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8377,10 +8441,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "- Explorez : Parcourez l\u2019\xEEle et interagissez avec les \xE9l\xE9ments.\n-
-    Identifiez les risques : Cliquez sur chaque situation ou objet dangereux que
-    vous trouvez afin de les noter.\n- Rencontrez l\u2019\xE9quipe : Cliquez sur
-    les membres de l\u2019\xE9quipe."
+  m_text: "-Explorez et parcourez l\u2019\xEEle en interagissant avec les \xE9l\xE9ments.\n-Identifiez
+    les risques en cliquant sur chaque situation ou objet dangereux.\n-Rencontrez
+    l\u2019\xE9quipe en s\xE9lectionnant les personnages sur l\u2019illustration. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
   m_sharedMaterial: {fileID: -6344687885589285405, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
@@ -8919,6 +8982,14 @@ PrefabInstance:
       value: "Emilie, la Responsable Production : elle coordonne les journ\xE9es
         s\xE9curit\xE9 pour des d\xE9briefings personnalis\xE9s, une logistique au
         top et des animateurs form\xE9s."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -12.053528
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 55.962524
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11145,7 +11216,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Rep\xE9rez les risques cach\xE9s et rencontrez l\u2019\xE9quipe tout en
-    explorant la Fabrique Cr\xE9ative."
+    explorant notre Fabrique Cr\xE9ative."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
   m_sharedMaterial: {fileID: -6344687885589285405, guid: 5e899ce0e5a96db47ac9fd1ba5a59b2a, type: 2}
@@ -11448,6 +11519,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "Sacha, le Game Designer : il associe le game design, sa formation de
         base, \xE0 la pr\xE9vention pour concevoir des ateliers participatifs."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.w
+      value: -19.170166
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877234713766333275, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
+      propertyPath: m_margin.z
+      value: 70.01294
       objectReference: {fileID: 0}
     - target: {fileID: 4138058917939609009, guid: 5d2c25df6cce1c948b45c44c8db7f510, type: 3}
       propertyPath: m_AnchorMax.y
