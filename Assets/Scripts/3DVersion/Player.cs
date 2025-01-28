@@ -29,8 +29,6 @@ public class Player : MonoBehaviour
 
     void OnClickPerformed(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Click!");
-
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
                 

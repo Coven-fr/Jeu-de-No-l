@@ -13,6 +13,13 @@ public class Situation : Selectable
         Mask.SetActive(false);
     }
 
+    protected override void ResetElement()
+    {
+        base.ResetElement();
+
+        Mask.SetActive(true);
+    }
+
     private void OnEnable()
     {
         GameEvent.current.onRestart += ResetElement;

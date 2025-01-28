@@ -37,6 +37,8 @@ public class Selectable : MonoBehaviour
 
     protected virtual void ResetElement()
     {
+        col.enabled = true;
+
         Element.IsChecked = false;
     }
 }

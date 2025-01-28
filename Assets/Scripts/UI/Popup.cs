@@ -16,6 +16,11 @@ public class Popup : MonoBehaviour
     Vector3 startPos;
     Vector2 startSize;
 
+    Coroutine currentAnimRoutine;
+
+    List<Sprite> waitingClosedList = new();
+    List<CharacterUI> waitingOpenedList = new();
+
     void Start()
     {
         startPos = popupImage.rectTransform.position;
@@ -26,26 +31,65 @@ public class Popup : MonoBehaviour
     {
         popupScreen.enabled = true;
 
-        popupImage.sprite = icon;
+        if (!popupAnim.isPlaying)
+        {
+            popupImage.sprite = icon;
 
-        popupAnim.Play();
+            popupAnim.Play();
+        }
+        else
+        {
+            waitingClosedList.Add(icon);
+
+            Debug.Log("Wait: " + waitingClosedList.Count);
+        }        
+    }
+
+    public void CheckNextPopup()
+    {
+        if(waitingClosedList.Count != 0)
+        {
+            popupAnim.Rewind();
+
+            Debug.Log("Play anim");
+
+            Sprite nextAnim = waitingClosedList[0];
+
+            waitingClosedList.Remove(nextAnim);
+
+            popupImage.sprite = nextAnim;            
+
+            popupAnim.Play();
+        }
+        else
+        {
+            ClosePopup();
+        }
     }
 
     public void ShowPopupListOpened(CharacterUI target)
     {
         popupScreen.enabled = true;
 
-        popupImage.sprite = target.Icon;
+        if (currentAnimRoutine == null)
+            currentAnimRoutine = StartCoroutine(MoveImageToList(target, timeToMove));
+        else
+            waitingOpenedList.Add(target);
+    }
 
-        
+    void ShowNextPopupListOpened(CharacterUI target)
+    {
+        waitingOpenedList.Remove(target);
 
-        StartCoroutine(MoveImageToList(target, timeToMove));
+        currentAnimRoutine = StartCoroutine(MoveImageToList(target, timeToMove));
     }
 
     IEnumerator MoveImageToList(CharacterUI target, float duration)
     {
         RectTransform targetRect = target.GetComponentInChildren<Image>().rectTransform;
         float timeElapsed = 0f;
+
+        popupImage.sprite = target.Icon;
 
         while(timeElapsed < duration)
         {
@@ -60,8 +104,16 @@ public class Popup : MonoBehaviour
 
         target.ChangeImage();
 
-        ClosePopup();
         ResetPopup();
+
+        if (waitingOpenedList.Count != 0)
+        {
+            ShowNextPopupListOpened(waitingOpenedList[0]);
+        }
+        else
+        {
+            ClosePopup();
+        }
     }
 
     public void ClosePopup()
@@ -75,5 +127,7 @@ public class Popup : MonoBehaviour
     {
         popupImage.rectTransform.position = startPos;
         popupImage.rectTransform.sizeDelta = startSize;
+
+        currentAnimRoutine = null;
     }
 }
